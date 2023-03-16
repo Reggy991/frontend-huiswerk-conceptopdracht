@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
 * {
     box-sizing: border-box;
     padding: 0;
@@ -7,10 +8,11 @@
 /*---------------------------------------------------------------------
 Table of Contents:
     1. Global Styles
+        1.1 Kleuren
     2. Typografie
     3. Areas
         3.1 Header
-        3.2 ...
+        3.2 Main
         3.3 ...
         3.4 ...
         3.5 Footer
@@ -21,17 +23,123 @@ Table of Contents:
     1. Global Styles
 ----------------------*/
 
-/*------------ 1.1 Kleuren ------------
 
--------------------------------------*/
+/*------------ 1.1 Kleuren ------------*/
+:root {
+    --color-purple: #5722CD;
+    --color-blue: #4845E4;
+    --color-pink: #ED4385;
+    /*Voor standaard tekst:*/
+    --color-black: #0C0C0C;
+    /*Voor de grote zwevende woorden, zoals "hello" en "services":*/
+    --color-light-purple: #F2F0FF;
+    /*Voor de achtergrond van de projecten:*/
+    --color-light-grey: #F3F6F9;
+    /*Voor de service-tegel tekst:*/
+    --color-grey: #7A7A7A;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+button {
+    background-color: var(--color-pink);
+    border-radius: 30px;
+    padding: 15px 20px;
+    color: var(--color-light-grey);
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
 
 /*----------------------
     2. Typography
 ----------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+button {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
 
 /*----------------------
     3. Areas
 ----------------------*/
 
 /*------------ 3.1 Header ------------*/
+header {
+    background-image: linear-gradient(to bottom right, var(--color-blue), var(--color-purple));
+    color: var(--color-light-grey);
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px 40px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    list-style-type: none;
+}
+
+.nav-list-item {
+    color: var(--color-light-grey);
+    text-decoration: none;
+}
+
+.introduction-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 200px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    gap: 20px;
+    margin: 0 200px;
+    padding: 30px 50px;
+
+    text-align: center;
+    /*border: 1px solid red;*/
+}
+
+.decoration-lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-top: 50px;
+    margin-bottom: -80px;
+}
+
+.line-item {
+    max-height: 100px;
+}
+
+/*------------ 3.2 Main ------------*/
