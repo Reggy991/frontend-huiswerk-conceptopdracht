@@ -186,15 +186,16 @@ header {
 
     display: flex;
     flex-direction: column;
-    padding: 20px 40px 40px 40px;
+    /*padding: 20px 40px 40px 40px;*/
+    padding: 1em 2em 2em 2em;
 }
 
 nav {
     display: flex;
     justify-content: flex-end;
-    height: 30px;
     flex-grow: 0;
     flex-shrink: 0;
+    padding: 10px;
 }
 
 .nav-list {
@@ -217,8 +218,11 @@ nav {
     align-items: center;
     flex-basis: auto;
     gap: 20px;
-    margin: 0 150px;
-    padding: 30px 100px;
+
+    /*margin: 0 150px;*/
+    /*padding: 30px 100px;*/
+    margin: 0 10em;
+    padding: 2em 6em;
 
     text-align: center;
 }
@@ -294,19 +298,12 @@ main {
 }
 
 .project-image {
-    width: 600px;
+    width: 100%;
     box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.18);
 }
 
-.inner-container-text {
-    display: flex;
+.image-wrapper {
     flex-basis: auto;
-    padding: 0 220px 0 30px;
-}
-
-.decoration-line-projects {
-    max-width: 40px;
-    flex: none;
 }
 
 .inner-container-text {
@@ -314,6 +311,14 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     gap: 40px;
+    flex-basis: auto;
+    padding: 1em 2em;
+    /*padding: 0 220px 0 30px;*/
+}
+
+.decoration-line-projects {
+    max-width: 40px;
+    flex: none;
 }
 
 /*------------ 3.2.3 Section 3 - WHAT WE DO ------------*/
@@ -367,6 +372,7 @@ main {
 form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .send-contact-form {
@@ -408,4 +414,73 @@ footer div {
     flex: none;
     text-align: center;
 }
+
+/*----------------------
+    4. Media Queries
+----------------------*/
+@media (max-width: 992px) {
+    header {
+        padding: 0.5em;
+    }
+
+    nav {
+        justify-content: space-evenly;
+    }
+
+    .nav-list {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .introduction-wrapper {
+        margin: 0;
+        padding: 2em 1em;
+    }
+
+    .decoration-lines {
+        margin-bottom: -30px;
+    }
+
+    .section-company-description {
+        margin: 0;
+        padding: 2em 3em;
+    }
+
+    .project-item-1, .project-item-2, .project-item-3 {
+        gap: 1em;
+        padding: 2em 0;
+    }
+
+    .inner-container-text {
+        gap: 2em;
+        padding: 1em 2em;
+    }
+
+    .outer-container-4 {
+        margin: 0;
+        padding: 2em 3em;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .outer-container {
+        margin: 0;
+    }
+
+    .project-item-1, .project-item-2, .project-item-3 {
+        flex-direction: column-reverse;
+        padding: 1em 0;
+    }
+
+    .inner-container-text {
+        padding: 2em;
+    }
+
+    .a-view-project {
+        font-size: 10px;
+    }
+}
+
 
